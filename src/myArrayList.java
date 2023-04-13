@@ -1,15 +1,18 @@
-public class myArrayList<T> {
+public class myArrayList<T> implements myList<T> {
     private T[] arr;
     private int size;
     public myArrayList() {
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
-    public void add(T value) {
+    public int size() {
+        return size;
+    }
+    public void add(T item) {
         if (size == arr.length) {
             increaseLength();
         }
-        arr[size++] = value;
+        arr[size++] = item;
     }
     public void increaseLength() {
         T[] newArr = (T[]) new Object[arr.length * 2];
@@ -29,7 +32,7 @@ public class myArrayList<T> {
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
-    public void delete(int index) {
+    public T remove(int index) {
         checkIndex(index);
         for (int i = index + 1; i < size; i++) {
             arr[i - 1] = arr[i];
