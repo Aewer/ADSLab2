@@ -17,6 +17,6 @@ public class Main {
             System.out.print(" ");
         }
         System.out.println();
-        System.out.println(arrayList.contains(21));
+        System.out.println(arrayList.indexOf(25));
     }
 }
