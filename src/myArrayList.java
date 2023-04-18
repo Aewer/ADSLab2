@@ -60,6 +60,16 @@ public class myArrayList<T> implements myList<T> {
         size -= 1;
         return value;
     }
+    public boolean remove(T item) {
+        if (contains(item)) {
+            for (int i = indexOf(item) + 1; i < size; i++) {
+                arr[i - 1] = arr[i];
+            }
+            size -= 1;
+            return true;
+        }
+        return false;
+    }
     public int indexOf(Object o) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == o) {
