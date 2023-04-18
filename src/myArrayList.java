@@ -78,6 +78,14 @@ public class myArrayList<T> implements myList<T> {
         }
         return -1;
     }
+    public int lastIndexOf(Object o) {
+        for (int i = size; i >= 0; i--) {
+            if (arr[i] == o) {
+                return i;
+            }
+        }
+        return -1;
+    }
     public void checkIndex(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();

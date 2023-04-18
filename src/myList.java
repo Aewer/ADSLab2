@@ -8,6 +8,6 @@ public interface myList<T> {
     void clear();
     T get(int index);
     int indexOf(Object o);
-    //int lastIndexOf(Object o);
+    int lastIndexOf(Object o);
     //void sort();
 }
