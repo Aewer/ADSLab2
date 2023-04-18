@@ -8,6 +8,14 @@ public class myArrayList<T> implements myList<T> {
     public int size() {
         return size;
     }
+    public boolean contains(Object o) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == o) {
+                return true;
+            }
+        }
+        return false;
+    }
     public void add(T item) {
         if (size == arr.length) {
             increaseLength();
