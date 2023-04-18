@@ -14,6 +14,17 @@ public class myArrayList<T> implements myList<T> {
         }
         arr[size++] = item;
     }
+    public void add(T item, int index) {
+        checkIndex(index);
+        if (size == arr.length) {
+            increaseLength();
+        }
+        size++;
+        for (int i = size; i > index; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[index] = item;
+    }
     public void increaseLength() {
         T[] newArr = (T[]) new Object[arr.length * 2];
         for (int i = 0; i < arr.length; i++) {
@@ -21,7 +32,7 @@ public class myArrayList<T> implements myList<T> {
         }
         arr = newArr;
     }
-    public T getElement(int index) {
+    public T get(int index) {
         checkIndex(index);
         return arr[index];
     }
@@ -34,10 +45,12 @@ public class myArrayList<T> implements myList<T> {
     }
     public T remove(int index) {
         checkIndex(index);
+        T value = arr[index];
         for (int i = index + 1; i < size; i++) {
             arr[i - 1] = arr[i];
         }
         size -= 1;
+        return value;
     }
     public void checkIndex(int index) {
         if (index < 0 || index >= size) {

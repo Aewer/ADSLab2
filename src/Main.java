@@ -8,5 +8,15 @@ public class Main {
         arrayList.add(15);
         arrayList.add(20);
         arrayList.add(25);
+        arrayList.add(30);
+        arrayList.add(35);
+        arrayList.add(12, 2);
+        //arrayList.remove(2);
+        for (int i = 0; i < arrayList.getSize(); i++) {
+            System.out.print(arrayList.get(i));
+            System.out.print(" ");
+        }
+        System.out.println();
+        System.out.println(arrayList.getSize());
     }
 }
