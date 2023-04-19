@@ -25,4 +25,11 @@ public class MyLinkedList<T> {
         }
         size++;
     }
+    public T get(int index) {
+        Node<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.val;
+    }
 }
