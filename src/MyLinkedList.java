@@ -15,6 +15,19 @@ public class MyLinkedList<T> {
         this.head = null;
         this. size = 0;
     }
+    boolean contains(Object o) {
+        Node<T> current = head;
+        if (head.elem == o) {
+            return true;
+        }
+        for (int i = 0; i < size - 1; i++) {
+            current = current.next;
+            if (current.elem == o) {
+                return true;
+            }
+        }
+        return false;
+    }
     public void add(T item) {
         Node<T> newNode = new Node<>(item);
         if (head == null) {

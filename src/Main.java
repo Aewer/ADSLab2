@@ -19,9 +19,13 @@ public class Main {
         linkedList.add("a");
         linkedList.add("b");
         linkedList.add("c");
+        linkedList.add("d");
+        linkedList.add("e");
         linkedList.remove(1);
         for (int i = 0; i < linkedList.size(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
+        System.out.println();
+        System.out.println(linkedList.contains("a"));
     }
 }
