@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        MyArrayList arrayList = new MyArrayList();
+        /*MyArrayList arrayList = new MyArrayList();
         arrayList.add(5);
         arrayList.add(30);
         arrayList.add(75);
@@ -9,13 +9,18 @@ public class Main {
         arrayList.add(30);
         arrayList.add(7);
         //arrayList.add(12, 2);
-        //arrayList.remove("b");
         arrayList.sort();
         for (int i = 0; i < arrayList.getSize(); i++) {
-            System.out.print(arrayList.get(i));
-            System.out.print(" ");
+            System.out.print(arrayList.get(i) + " ");
         }
         System.out.println();
-        System.out.println(arrayList.lastIndexOf(30));
+        System.out.println(arrayList.lastIndexOf(30));*/
+        MyLinkedList linkedList = new MyLinkedList();
+        linkedList.add("a");
+        linkedList.add("b");
+        linkedList.add("c");
+        for (int i = 0; i < 3; i++) {
+            System.out.print(linkedList.get(i) + " ");
+        }
     }
 }

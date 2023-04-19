@@ -32,4 +32,7 @@ public class MyLinkedList<T> {
         }
         return current.val;
     }
+    public int size() {
+        return size;
+    }
 }
