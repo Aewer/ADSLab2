@@ -1,8 +1,6 @@
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        myArrayList arrayList = new myArrayList();
+        MyArrayList arrayList = new MyArrayList();
         arrayList.add(5);
         arrayList.add(30);
         arrayList.add(75);

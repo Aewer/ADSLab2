@@ -1,7 +1,7 @@
-public class myArrayList<T> implements myList<T> {
+public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
     private int size;
-    public myArrayList() {
+    public MyArrayList() {
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
