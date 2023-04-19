@@ -19,7 +19,8 @@ public class Main {
         linkedList.add("a");
         linkedList.add("b");
         linkedList.add("c");
-        for (int i = 0; i < 3; i++) {
+        linkedList.remove(1);
+        for (int i = 0; i < linkedList.size(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
     }

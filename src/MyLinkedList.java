@@ -2,12 +2,12 @@ public class MyLinkedList<T> {
     private Node<T> head;
     private Node<T> tail;
     private int size;
-    private static class Node<E> {
-        E val;
-        Node<E> next, previous;
+    private static class Node<T> {
+        T elem;
+        Node<T> next, previous;
 
-        Node(E val) {
-            this.val = val;
+        Node(T elem) {
+            this.elem = elem;
             this.next = null;
         }
     }
@@ -30,9 +30,21 @@ public class MyLinkedList<T> {
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
-        return current.val;
+        return current.elem;
     }
     public int size() {
         return size;
+    }
+    public void remove (int index) {
+        if (index == 0) {
+            head = head.next;
+        } else {
+            Node<T> current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.next;
+            }
+            current.next = current.next.next;
+        }
+        size--;
     }
 }
