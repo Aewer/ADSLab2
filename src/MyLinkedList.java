@@ -13,7 +13,7 @@ public class MyLinkedList<T> {
     }
     MyLinkedList() {
         this.head = null;
-        this. size = 0;
+        this.size = 0;
     }
     boolean contains(Object o) {
         Node<T> current = head;
@@ -78,4 +78,18 @@ public class MyLinkedList<T> {
         }
         return -1;
     }
+    /*public int lastIndexOf(Object o) {
+        Node<T> current = tail;
+        if (tail.elem == o) {
+            return size;
+        }
+        for (int i = size; i > 0; i--) {
+            System.out.println(current.elem);
+            current = current.previous;
+            if (current.elem == o) {
+                return i;
+            }
+        }
+        return -1;
+    }*/
 }

@@ -18,6 +18,7 @@ public class Main {
         MyLinkedList linkedList = new MyLinkedList();
         linkedList.add("a");
         linkedList.add("b");
+        linkedList.add("d");
         linkedList.add("c");
         linkedList.add("d");
         linkedList.add("e");
@@ -25,7 +26,5 @@ public class Main {
         for (int i = 0; i < linkedList.size(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
-        System.out.println();
-        System.out.println(linkedList.indexOf("d"));
     }
 }
