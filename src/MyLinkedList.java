@@ -65,4 +65,17 @@ public class MyLinkedList<T> {
         tail = null;
         size = 0;
     }
+    public int indexOf(Object o) {
+        Node<T> current = head;
+        if (head.elem == o) {
+            return 0;
+        }
+        for (int i = 0; i < size - 1; i++) {
+            current = current.next;
+            if (current.elem == o) {
+                return i + 1;
+            }
+        }
+        return -1;
+    }
 }

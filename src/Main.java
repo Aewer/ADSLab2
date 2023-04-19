@@ -26,6 +26,6 @@ public class Main {
             System.out.print(linkedList.get(i) + " ");
         }
         System.out.println();
-        System.out.println(linkedList.contains("a"));
+        System.out.println(linkedList.indexOf("d"));
     }
 }
