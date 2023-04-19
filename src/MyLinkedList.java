@@ -60,4 +60,9 @@ public class MyLinkedList<T> {
         }
         size--;
     }
+    public void clear() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
 }
