@@ -7,4 +7,8 @@ public class MyLinkedList {
             this.next = null;
         }
     }
+    Node head;
+    MyLinkedList() {
+        this.head = null;
+    }
 }
