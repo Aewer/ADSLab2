@@ -1,6 +1,6 @@
-public class MyLinkedList<E> {
-    private Node<E> head;
-    private Node<E> tail;
+public class MyLinkedList<T> {
+    private Node<T> head;
+    private Node<T> tail;
     private int size;
     private static class Node<E> {
         E val;
@@ -15,5 +15,14 @@ public class MyLinkedList<E> {
         this.head = null;
         this. size = 0;
     }
-
+    public void add(T item) {
+        Node<T> newNode = new Node<>(item);
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
 }
