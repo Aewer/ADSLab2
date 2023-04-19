@@ -86,6 +86,19 @@ public class myArrayList<T> implements myList<T> {
         }
         return -1;
     }
+    public void sort() {
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - 1 - i; j++) {
+                //int x = (Integer) arr[j];
+                //int y = (Integer) arr[j + 1];
+                if ((Integer) arr[j] > (Integer) arr[j + 1]) {
+                    T temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
     public void checkIndex(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();

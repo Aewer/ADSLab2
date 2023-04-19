@@ -9,5 +9,5 @@ public interface myList<T> {
     T get(int index);
     int indexOf(Object o);
     int lastIndexOf(Object o);
-    //void sort();
+    void sort();
 }
