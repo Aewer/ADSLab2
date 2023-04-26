@@ -9,6 +9,7 @@ public class MyLinkedList<T> {
         Node(T elem) {
             this.elem = elem;
             this.next = null;
+            this.previous = null;
         }
     }
     MyLinkedList() {
@@ -39,14 +40,23 @@ public class MyLinkedList<T> {
         }
         size++;
     }
-    /*void add(T item, int index) {
-        checkIndex(index);
+    void add(T item, int index) {
         Node<T> newNode = new Node<>(item);
         if (index == size) {
             add(item);
+        } else {
+            size++;
+            Node<T> current = get(index);
+            newNode.next = current;
+            newNode.previous = current.previous;
+            if (current.previous == null) {
+                head = newNode;
+            } else {
+                current.previous.next = newNode;
+            }
+            current.previous = newNode;
         }
-
-    }*/
+    }
     public Node<T> get(int index) {
         checkIndex(index);
         Node<T> current = head;
@@ -62,8 +72,9 @@ public class MyLinkedList<T> {
     public int size() {
         return size;
     }
-    public void remove (int index) {
+    public T remove (int index) {
         checkIndex(index);
+        T removedElement = getElem(index);
         if (index == 0) {
             head = head.next;
         }
@@ -77,6 +88,7 @@ public class MyLinkedList<T> {
             current.next = current.next.next;
         }
         size--;
+        return removedElement;
     }
     public void clear() {
         head = null;
