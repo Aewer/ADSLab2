@@ -33,12 +33,14 @@ public class MyLinkedList<T> {
         if (head == null) {
             head = tail = newNode;
         } else {
+            newNode.previous = tail;
             tail.next = newNode;
             tail = newNode;
         }
         size++;
     }
     public T get(int index) {
+        checkIndex(index);
         Node<T> current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
@@ -49,8 +51,12 @@ public class MyLinkedList<T> {
         return size;
     }
     public void remove (int index) {
+        checkIndex(index);
         if (index == 0) {
             head = head.next;
+        }
+        else if (index == size - 1) {
+            tail = tail.previous;
         } else {
             Node<T> current = head;
             for (int i = 0; i < index - 1; i++) {
@@ -78,18 +84,25 @@ public class MyLinkedList<T> {
         }
         return -1;
     }
-    /*public int lastIndexOf(Object o) {
+    public int lastIndexOf(Object o) {
         Node<T> current = tail;
         if (tail.elem == o) {
-            return size;
+            return size - 1;
+        }
+        if (head.elem == o) {
+            return 0;
         }
         for (int i = size; i > 0; i--) {
-            System.out.println(current.elem);
             current = current.previous;
             if (current.elem == o) {
-                return i;
+                return i - 2;
             }
         }
         return -1;
-    }*/
+    }
+    public void checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 }

@@ -21,10 +21,12 @@ public class Main {
         linkedList.add("d");
         linkedList.add("c");
         linkedList.add("d");
+        linkedList.add("c");
         linkedList.add("e");
-        linkedList.remove(1);
+        linkedList.remove(3);
         for (int i = 0; i < linkedList.size(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
+        System.out.println(linkedList.lastIndexOf("a"));
     }
 }
