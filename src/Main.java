@@ -23,11 +23,12 @@ public class Main {
         linkedList.add("d");
         linkedList.add("c");
         linkedList.add("e");
-        linkedList.remove("a");
         linkedList.add("a", 0);
+        linkedList.remove("e");
         for (int i = 0; i < linkedList.size(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
-        //System.out.println(linkedList.lastIndexOf("a"));
+        System.out.println();
+        System.out.println("Last index of c is " + linkedList.lastIndexOf("c"));
     }
 }
