@@ -39,12 +39,24 @@ public class MyLinkedList<T> {
         }
         size++;
     }
-    public T get(int index) {
+    /*void add(T item, int index) {
+        checkIndex(index);
+        Node<T> newNode = new Node<>(item);
+        if (index == size) {
+            add(item);
+        }
+
+    }*/
+    public Node<T> get(int index) {
         checkIndex(index);
         Node<T> current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
+        return current;
+    }
+    public T getElem(int index) {
+        Node<T> current = get(index);
         return current.elem;
     }
     public int size() {
