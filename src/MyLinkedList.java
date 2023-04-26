@@ -1,4 +1,4 @@
-public class MyLinkedList<T> {
+public class MyLinkedList<T> implements MyList<T> {
     private Node<T> head;
     private Node<T> tail;
     private int size;
@@ -16,7 +16,7 @@ public class MyLinkedList<T> {
         this.head = null;
         this.size = 0;
     }
-    boolean contains(Object o) {
+    public boolean contains(Object o) {
         Node<T> current = head;
         if (head.elem == o) {
             return true;
@@ -40,13 +40,13 @@ public class MyLinkedList<T> {
         }
         size++;
     }
-    void add(T item, int index) {
+    public void add(T item, int index) {
         Node<T> newNode = new Node<>(item);
         if (index == size) {
             add(item);
         } else {
             size++;
-            Node<T> current = get(index);
+            Node<T> current = getNode(index);
             newNode.next = current;
             newNode.previous = current.previous;
             if (current.previous == null) {
@@ -57,7 +57,7 @@ public class MyLinkedList<T> {
             current.previous = newNode;
         }
     }
-    public Node<T> get(int index) {
+    public Node<T> getNode(int index) {
         checkIndex(index);
         Node<T> current = head;
         for (int i = 0; i < index; i++) {
@@ -65,8 +65,8 @@ public class MyLinkedList<T> {
         }
         return current;
     }
-    public T getElem(int index) {
-        Node<T> current = get(index);
+    public T get(int index) {
+        Node<T> current = getNode(index);
         return current.elem;
     }
     public int size() {
@@ -74,7 +74,7 @@ public class MyLinkedList<T> {
     }
     public T remove (int index) {
         checkIndex(index);
-        T removedElement = getElem(index);
+        T removedElement = get(index);
         if (index == 0) {
             head = head.next;
         }
@@ -89,6 +89,15 @@ public class MyLinkedList<T> {
         }
         size--;
         return removedElement;
+    }
+    public boolean remove(T item) {
+        int index = indexOf(item);
+        if (index == -1) {
+            return false;
+        } else {
+            remove(index);
+            return true;
+        }
     }
     public void clear() {
         head = null;
@@ -129,4 +138,7 @@ public class MyLinkedList<T> {
             throw new IndexOutOfBoundsException();
         }
     }
+    public void sort() {
+
+    };
 }
