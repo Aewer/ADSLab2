@@ -139,6 +139,25 @@ public class MyLinkedList<T> implements MyList<T> {
         }
     }
     public void sort() {
+        Node<T> current = head, after = null;
+        if (head == null) {
+            return;
+        }
+        else {
+            while (current != null) {
+                after = current.next;
 
-    };
+                while (after != null) {
+                    if ((Integer) current.elem > (Integer) after.elem) {
+                        T temp = current.elem;
+                        current.elem = after.elem;
+                        after.elem = temp;
+                    }
+
+                    after = after.next;
+                }
+                current = current.next;
+            }
+        }
+    }
 }

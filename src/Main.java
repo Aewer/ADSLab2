@@ -16,7 +16,7 @@ public class Main {
         System.out.println();
         System.out.println(arrayList.lastIndexOf(30));*/
         MyLinkedList linkedList = new MyLinkedList();
-        linkedList.add("a");
+        /*linkedList.add("a");
         linkedList.add("b");
         linkedList.add("d");
         linkedList.add("c");
@@ -24,11 +24,17 @@ public class Main {
         linkedList.add("c");
         linkedList.add("e");
         linkedList.add("a", 0);
-        linkedList.remove("e");
+        linkedList.remove("e");*/
+        linkedList.add(7);
+        linkedList.add(4);
+        linkedList.add(3);
+        linkedList.add(9);
+        linkedList.add(8);
+        linkedList.sort();
         for (int i = 0; i < linkedList.size(); i++) {
             System.out.print(linkedList.get(i) + " ");
         }
-        System.out.println();
-        System.out.println("Last index of c is " + linkedList.lastIndexOf("c"));
+        //System.out.println();
+        //System.out.println("Last index of c is " + linkedList.lastIndexOf("c"));
     }
 }
