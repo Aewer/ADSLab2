@@ -144,4 +144,15 @@ public class MyArrayList<T> implements MyList<T> {
             throw new IndexOutOfBoundsException();
         }
     }
+    public void sort(int start, int end) {
+        for (int i = start; i < end; i++) {
+            for (int j = start; j < end; j++) {
+                if ((Integer) arr[j] > (Integer) arr[j + 1]) {
+                    T temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
 }
