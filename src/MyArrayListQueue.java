@@ -3,4 +3,8 @@ public class MyArrayListQueue<T> {
     MyArrayListQueue() {
         arrayList = new MyArrayList<>();
     }
+    public T peek() {
+        return arrayList.get(arrayList.size() - 1);
+    }
+
 }
