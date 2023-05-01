@@ -20,5 +20,15 @@ public class Main {
         System.out.println(queueArrayList.peek());
         queueArrayList.dequeue();
         System.out.println(queueArrayList.peek());
+
+        System.out.println("MyLinkedListQueue");
+        MyLinkedListQueue queueLinkedList = new MyLinkedListQueue();
+        queueLinkedList.enqueue(1);
+        queueLinkedList.enqueue(2);
+        queueLinkedList.enqueue(3);
+        queueLinkedList.enqueue(4);
+        System.out.println(queueLinkedList.peek());
+        queueLinkedList.dequeue();
+        System.out.println(queueLinkedList.peek());
     }
 }
