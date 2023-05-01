@@ -4,7 +4,7 @@ public class MyArrayListQueue<T> {
         arrayList = new MyArrayList<>();
     }
     public T peek() {
-        return arrayList.get(arrayList.size() - 1);
+        return arrayList.get(0);
     }
 
 }
