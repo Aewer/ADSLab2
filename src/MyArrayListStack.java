@@ -10,4 +10,9 @@ public class MyArrayListStack<T> {
     public T peek() {
         return arrayList.get(arrayList.size() - 1);
     }
+    public T pop() {
+        T value = peek();
+        arrayList.remove(arrayList.size() - 1);
+        return value;
+    }
 }
