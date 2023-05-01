@@ -15,4 +15,7 @@ public class MyLinkedListStack<T> {
         linkedList.remove(linkedList.size() - 1);
         return value;
     }
+    public int size() {
+        return linkedList.size();
+    }
 }
