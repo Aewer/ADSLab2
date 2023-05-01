@@ -7,4 +7,7 @@ public class MyLinkedListStack<T> {
         linkedList.add(value);
         return value;
     }
+    public T peek() {
+        return linkedList.get(linkedList.size() - 1);
+    }
 }
