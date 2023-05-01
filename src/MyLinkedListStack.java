@@ -10,4 +10,9 @@ public class MyLinkedListStack<T> {
     public T peek() {
         return linkedList.get(linkedList.size() - 1);
     }
+    public T pop() {
+        T value = peek();
+        linkedList.remove(linkedList.size() - 1);
+        return value;
+    }
 }
