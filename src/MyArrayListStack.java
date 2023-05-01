@@ -7,4 +7,7 @@ public class MyArrayListStack<T> {
         arrayList.add(value);
         return value;
     }
+    public T peek() {
+        return arrayList.get(arrayList.size() - 1);
+    }
 }
