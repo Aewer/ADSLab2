@@ -140,7 +140,7 @@ public class MyArrayList<T> implements MyList<T> {
     @checkIndex checks if an index exists and throws an exception if it doesn't
      */
     public void checkIndex(int index) {
-        if (index < 0 || index >= size) {
+        if (index != 0 && (index < 0 || index >= size)) {
             throw new IndexOutOfBoundsException();
         }
     }
