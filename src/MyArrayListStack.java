@@ -3,5 +3,8 @@ public class MyArrayListStack<T> {
     MyArrayListStack() {
         arrayList = new MyArrayList<>();
     }
-
+    public T push(T value) {
+        arrayList.add(value);
+        return value;
+    }
 }
