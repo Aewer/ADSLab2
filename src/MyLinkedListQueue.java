@@ -18,4 +18,11 @@ public class MyLinkedListQueue<T> {
     public int size() {
         return linkedList.size();
     }
+    public boolean isEmpty() {
+        if (linkedList.size() == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
