@@ -66,6 +66,7 @@ public class MyLinkedList<T> implements MyList<T> {
         return current;
     }
     public T get(int index) {
+        checkIndex(index);
         Node<T> current = getNode(index);
         return current.elem;
     }
@@ -134,7 +135,7 @@ public class MyLinkedList<T> implements MyList<T> {
         return -1;
     }
     public void checkIndex(int index) {
-        if (index < 0 || index >= size) {
+        if (index != 0 && (index < 0 || index >= size)) {
             throw new IndexOutOfBoundsException();
         }
     }

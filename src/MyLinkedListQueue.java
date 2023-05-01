@@ -3,5 +3,7 @@ public class MyLinkedListQueue<T> {
     MyLinkedListQueue() {
         linkedList = new MyLinkedList<>();
     }
-
+    public T peek() {
+        return linkedList.get(0);
+    }
 }
