@@ -15,4 +15,7 @@ public class MyArrayListQueue<T> {
         arrayList.remove(0);
         return value;
     }
+    public int size() {
+        return arrayList.size();
+    }
 }
