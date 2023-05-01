@@ -15,4 +15,7 @@ public class MyArrayListStack<T> {
         arrayList.remove(arrayList.size() - 1);
         return value;
     }
+    public int size() {
+        return arrayList.size();
+    }
 }
