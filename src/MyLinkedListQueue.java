@@ -15,4 +15,7 @@ public class MyLinkedListQueue<T> {
         linkedList.remove(0);
         return value;
     }
+    public int size() {
+        return linkedList.size();
+    }
 }
